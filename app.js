@@ -2,7 +2,6 @@
 import { rockPaperScissors } from './utils.js';
 import { compareThrows } from './utils.js';
 
-const currentThrow = document.getElementById('current-throw');
 const winsTotalSpan = document.getElementById('wins-total');
 const lossesTotalSpan = document.getElementById('losses-total');
 const totalSpan = document.getElementById('total');
@@ -26,12 +25,14 @@ throwButton.addEventListener('click', () => {
 
 // We compare the user's guess to the computer throw
 compareThrows(computerRps, userThrow);
+
+console.log(compareThrows);
 resultsUpdate();
 
 });
 // We need to display the result of the the throw
 function resultsUpdate(){
     winsTotalSpan.textContent = winsTotal;
-    lossesTotalSpan.textContent = winsTotal - total;
+    lossesTotalSpan.textContent = total - winsTotal;
     totalSpan.textContent = total;
 }

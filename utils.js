@@ -7,26 +7,21 @@ export function rockPaperScissors(randomThrow){
         return 'Scissors';
     }
 }
-export function compareThrows(){
-    if (computerRps === userThrow){
+export function compareThrows(computerRps, userThrow){
+    
+    if (computerRps === 'Scissors' && userThrow === 'Paper'){
+        currentThrow.textContent = `You lose! You threw ${userThrow}. The correct throw was ${computerRps}.`;
+    }else if (computerRps === 'Rock' && userThrow === 'Scissors'){
+        currentThrow.textContent = `You lose! You threw ${userThrow}. The correct throw was ${computerRps}.`;
+    }else if (computerRps === 'Paper' && userThrow === 'Rock'){
+        currentThrow.textContent = `You lose! You threw ${userThrow}. The correct throw was ${computerRps}.`;
+    }else if (computerRps === 'Scissors' && userThrow === 'Rock'){
+        currentThrow.textContent = `You win! You threw ${userThrow}. The correct throw was ${computerRps}.`;
+    }else if (computerRps === 'Rock' && userThrow === 'Paper'){
+        currentThrow.textContent = `You win! You threw ${userThrow}. The correct throw was ${computerRps}.`;
+    }else if (computerRps === 'Paper' && userThrow === 'Scissors'){
+        currentThrow.textContent = `You win! You threw ${userThrow}. The correct throw was ${computerRps}.`;
+    } else if (computerRps === userThrow){
         currentThrow.textContent = `Draw! You threw ${userThrow}. The correct throw was ${computerRps}.`;
-    } else if (){
-        
     }
 }
-
-// if the computer = scissors & userThrow = paper then computer wins
-// if the computer = rock & userThrow = scissors then computer wins
-// if the computer = paper & the userThrow = rock then the computer wins
-
-
-
-
-
-
-// else if (computerRps > userThrow){
-//     currentThrow.textContent = `You lose. You threw ${userThrow}. The correct throw was ${computerRps}.`;
-// } else if (computerRps < userThrow){
-//     winsTotal++;
-//     currentThrow.textContent = `You win! You threw ${userThrow}. The correct throw was ${computerRps}.`;
-// }
