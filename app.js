@@ -28,6 +28,7 @@ throwButton.addEventListener('click', () => {
         currentThrow.textContent = `You win!`;    
     }
     if(compareThrows(computerRps, userThrow) === 'draw'){
+        draws++;
         currentThrow.textContent = `Draw!`;
     }
 resultsUpdate();
