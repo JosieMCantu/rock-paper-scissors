@@ -1,5 +1,7 @@
 // import functions and grab DOM elements
 import { rockPaperScissors } from './utils.js';
+import { compareThrows } from './utils.js';
+
 const currentThrow = document.getElementById('current-throw');
 const winsTotalSpan = document.getElementById('wins-total');
 const lossesTotalSpan = document.getElementById('losses-total');
@@ -14,7 +16,6 @@ let total = 0;
 // set event listeners to update state and DOM
 throwButton.addEventListener('click', () => {
     total++;
-    
     const computerThrow = Math.round(Math.random());
     const computerRps = rockPaperScissors(computerThrow);
     
@@ -24,6 +25,13 @@ throwButton.addEventListener('click', () => {
     const userThrow = throwRadio.value; 
 
 // We compare the user's guess to the computer throw
-console.log(computerRps, userThrow);
-// We need to display the result of the the throw
+compareThrows(computerRps, userThrow);
+resultsUpdate();
+
 });
+// We need to display the result of the the throw
+function resultsUpdate(){
+    winsTotalSpan.textContent = winsTotal;
+    lossesTotalSpan.textContent = winsTotal - total;
+    totalSpan.textContent = total;
+}
