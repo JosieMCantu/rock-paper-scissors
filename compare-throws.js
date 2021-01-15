@@ -6,9 +6,9 @@ export function compareThrows(computerRps, userThrow){
         return 'lose';
     } else if (computerRps === 'Rock' && userThrow === 'Scissors'){
         return 'lose';
-     } else if (computerRps === 'Paper' && userThrow === 'Rock'){
+    } else if (computerRps === 'Paper' && userThrow === 'Rock'){
         return 'lose';
-     } else {
-         return 'win';    
-     }
+    } /*else {
+        return 'win';    
+    }*/
 }

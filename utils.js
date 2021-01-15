@@ -1,9 +1,9 @@
 export function rockPaperScissors(randomThrow){
-    if (randomThrow < .333333){
+    if (randomThrow === 1){
         return 'Rock';
-    } else if (randomThrow > .333 && randomThrow < .666) {
+    } else if (randomThrow === 2) {
         return 'Paper';
-    } else if (randomThrow > .666){
+    } else if (randomThrow === 3){
         return 'Scissors';
     }
 }
